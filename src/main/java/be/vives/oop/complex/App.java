@@ -33,5 +33,8 @@ public final class App {
       double factor = 10;
       Complex dividedByFactor = base.divide(factor);
       System.out.println(base + " / " + factor + " = " + dividedByFactor);
+
+      Complex multiplyByFactor = base.multiply(factor);
+      System.out.println(base + " / " + factor + " = " + dividedByFactor);
     }
 }
