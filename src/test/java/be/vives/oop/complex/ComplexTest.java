@@ -168,4 +168,17 @@ public class ComplexTest {
     assertEquals(12.5, result.getReal(), delta);
     assertEquals(-1.5, result.getImaginary(), delta);
   }
+
+
+  @Test
+  public void testDivideAnotherComplex() {
+    Complex first = new Complex(3, 2);
+    Complex second = new Complex(1, 7);
+
+    Complex result = first.divide(second);
+
+    assertEquals(0.34, result.getReal(), delta);
+    assertEquals(-0.38, result.getImaginary(), delta);
+  }
+  
 }

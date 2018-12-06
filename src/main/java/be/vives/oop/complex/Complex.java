@@ -71,26 +71,19 @@ public class Complex {
 
     public Complex divide(Complex second){ //delen met een complex getal
         Complex result = new Complex();
-        result.setReal((this.getReal()*second.getReal())-(this.getImaginary()*second.getImaginary()));
-        result.setImaginary((this.getReal()*second.getImaginary())+(second.getReal()*this.getImaginary()));
+        result.setReal(((this.getReal()*second.getReal())+(this.getImaginary()*second.getImaginary()))/
+                ((second.getReal()*second.getReal())+(second.getImaginary()*second.getImaginary())));
+        result.setImaginary(((this.getImaginary()*second.getReal())-(this.getReal()*second.getImaginary()))/
+                ((second.getReal()*second.getReal())+(second.getImaginary()*second.getImaginary())));
         return result;  
     }
 
 
 
-
-
-  
-
     Complex(Complex copy) { 
         real = copy.real; 
         imaginary = copy.imaginary; 
     } 
-
-
-
-
-
 
     @Override
     public String toString(){
@@ -101,6 +94,5 @@ public class Complex {
         }
      
     }
-
 
 }
